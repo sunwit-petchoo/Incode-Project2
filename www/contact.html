@@ -12,6 +12,8 @@
     <meta name="keywords" content="Coffee, Coffee shop, Mr. Coffee" />
     <title>Nous contacter</title>
     <link rel="stylesheet" href="/application.css" />
+    <link rel="stylesheet" href="/contactform.css" />
+    <script src="/form.js"></script>
   </head>
 
   <body>
@@ -28,6 +30,19 @@
       </nav>
     </header>
 
+    <div id="popup-modal" class="flex">
+      <img src="./assets/logo_dark.png" alt="Mr coffee black logo" />
+      <div class="popup-modal-content flex">
+        <h1 class="font32pt">MERCI</h1>
+        <h2 class="font32pt">Votre message a bien été envoyé !</h2>
+        <p class="font22pt">
+          Nous essaierons d’y répondre au mieux dans les plus brefs délais. À
+          bientot chez Mr.Coffee
+        </p>
+        <a id="closePopupBtn" class="form-btn">FERMER</a>
+      </div>
+    </div>
+
     <!-- Content -->
     <section id="main-content-contact">
       <img
@@ -35,6 +50,57 @@
         src="./assets/logo_mrcoffee.png"
         alt="Mr.Coffee black logo with text MR.COFFEE under"
       />
+      <div class="content-contact-details">
+        <h1 class="font32pt">Dites nous tout !</h1>
+        <form>
+          <label for="fname">Nom *</label><br />
+          <input
+            type="text"
+            id="fname"
+            class="text-box-style"
+            name="fname"
+            value=""
+          /><br />
+          <label for="sname">Prénom *</label><br />
+          <input
+            type="text"
+            id="sname"
+            class="text-box-style"
+            name="sname"
+            value=""
+          /><br />
+          <label for="phoneNumber">Téléphone </label><br />
+          <input
+            type="text"
+            id="phoneNumber"
+            class="text-box-style"
+            name="phoneNumber"
+            value=""
+          /><br />
+          <label for="email">Adresse mail *</label><br />
+          <input
+            type="text"
+            id="email"
+            class="text-box-style"
+            name="email"
+            value=""
+          /><br />
+          <label for="Message">Message *</label><br />
+          <textarea
+            id="Message"
+            name="Message"
+            rows="4"
+            cols="50"
+            placeholder="Tapez votre message ici"
+          ></textarea
+          ><br />
+          <div id="btn-div" class="flex">
+            <button type="submit" id="submitBtn" class="form-btn">
+              ENVOYER
+            </button>
+          </div>
+        </form>
+      </div>
       <h1 class="font32pt">On vous attend !</h1>
       <div class="content-contact-details">
         <p class="font16pt no-line-break"><strong>Mr.Coffee</strong></p>

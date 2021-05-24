@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailValidation =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   const phoneValidation = /^(?:\+?61|0)[2-478](?:[ -]?[0-9]){8}$/
-
+  
+  form.setAttribute("novalidate", true)
   form.onsubmit = (e) => {
     e.preventDefault()
-    form.setAttribute("novalidate", true)
-
+    
     let validate = true
     if (!nameValidation.test(name.value)) validate = false
 
